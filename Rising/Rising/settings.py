@@ -13,22 +13,24 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent # Это путь к проекту на самом ПК или же на сервере
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-0-504#tq2%gc%e2i!)o(=v@m1)%sux%#nv1jdayupj4wv4eeh-'
+SECRET_KEY = 'django-insecure-0-504#tq2%gc%e2i!)o(=v@m1)%sux%#nv1jdayupj4wv4eeh-' # Это ключь, по нему можно взломать сервер, поэтому при выгрузке куда то, его нужно менять
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True # Это дебагер, он выводит все ошибки, напрямую на сайт. Когда проект окажеться на серевере, его лучше поменять на False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [] # Публикуется на сайте который нужно вписать в [](пока не очень понятно)
 
 
 # Application definition
+# Разного рода приложения по работе с django framework
+# По сути даже в пустом проекте, уже есть админка и всё остальное
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -38,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+# Middleware это что то вроде доп плагинов для работы проекта, от защиты и до работы с авторизацией
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -49,8 +53,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Rising.urls'
+ROOT_URLCONF = 'Rising.urls' # Указывает на основной файл urls
 
+# это шаблоны, о них попозже
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -66,11 +71,12 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Rising.wsgi.application'
+WSGI_APPLICATION = 'Rising.wsgi.application' # Это приложение wsgi для запуска хоста
 
 
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
+# Базы данных, тут всё более менее понятно
 
 DATABASES = {
     'default': {
