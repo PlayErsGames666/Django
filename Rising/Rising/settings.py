@@ -33,6 +33,7 @@ ALLOWED_HOSTS = [] # Публикуется на сайте который ну�
 # По сути даже в пустом проекте, уже есть админка и всё остальное
 
 INSTALLED_APPS = [
+    'main', # Зарегестрировал приложение main
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
