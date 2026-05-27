@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
-</head>
-<body>
+{% extends 'main/layout.html' %}
+
+{% block title %} Main Page {% endblock %}
+
+{% block body %}
     <h1>Работает</h1>
     <h1>Working</h1>
     <a href="/about/">About U</a> 
     <!-- В Django прописывать путь для ссылки надо так, не как к обычному файлу HTML -->
-</body>
-</html>
+{% endblock %}
