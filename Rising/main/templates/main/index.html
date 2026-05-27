@@ -1,10 +1,16 @@
-{% extends 'main/layout.html' %}
+{% extends 'main/layout.html' %} 
+<!-- Берёт шаблон из layout.html -->
 
 {% block title %} Main Page {% endblock %}
+<!-- Блок Загаловка. Создаёт title для этого файла -->
 
 {% block body %}
+<!-- Блок body. Создаёт данные для страницы в браузере -->
     <h1>Работает</h1>
     <h1>Working</h1>
     <a href="/about/">About U</a> 
     <!-- В Django прописывать путь для ссылки надо так, не как к обычному файлу HTML -->
+
+    {% include 'main/test.html' %}
+    <!-- Добавляет сюда то что написано в test.html -->
 {% endblock %}
