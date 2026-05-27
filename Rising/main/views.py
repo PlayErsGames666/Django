@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse # Конвертрует html code для браузера
+# from django.http import HttpResponse # Конвертрует html code для браузера
 
 def index(request):
     return render(request, 'main/index.html')
