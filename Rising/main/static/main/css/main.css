@@ -37,10 +37,27 @@ aside ul li a {
     color: #fff;
     display: block;
     text-decoration: none; /* Убиает декорации с текста. Сейчас там ссылка без нижнего подчёркивания */
-    transition: all .6s ease; /* Делает всё плавно, тоесть 600 милисекунд */
+    transition: transform .6s ease; /* Делает всё плавно, тоесть 600 милисекунд */
 }
 
 aside ul li:hover, aside ul li a:hover {
     color: rgb(30, 30, 121);
     transform: scale(1.1); /* Делает текст анимированным, увеличение */
+}
+
+main .features {
+    float: left;
+    color: #fff;
+    margin-top: 100px;
+    text-align: center;
+    width: 75%;
+}
+
+main .features h1 {
+    font-size: 50px;
+}
+
+main .features p {
+    max-width: 400px;
+    margin: 20px auto;
 }
