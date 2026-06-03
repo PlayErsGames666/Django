@@ -6,11 +6,19 @@
 
 {% block body %}
 <!-- Блок body. Создаёт данные для страницы в браузере -->
-    <h1>Работает</h1>
-    <h1>Working</h1>
-    <a href="/about/">About U</a> 
-    <!-- В Django прописывать путь для ссылки надо так, не как к обычному файлу HTML -->
-
-    {% include 'main/test.html' %}
+<div class="features">
+    <h1>Main Page</h1>
+    <p>El libro que presentamos es el resultado de un apasionante trabajo por explicar 
+algunas de las más importantes innovaciones que están surgiendo en Internet 
+en estos momentos, siendo la actualización de nuestro anterior libro, publicado 
+en 2010. Está destinado al alumnado del Ciclo Formativo de Grado Medio de 
+Sistemas Microinformáticos y Redes (SMR), cuyo currículo oficial fue aprobado 
+el 14 de diciembre de 2007 en el Real Decreto 1691/2007, y fue publicado 
+en el BOE, con fecha 17 de enero de 2008, englobado dentro del catálogo 
+de títulos de la familia profesional de Informática y Comunicaciones confeccio- 
+nados por el Instituto Nacional de las Cualificaciones (INCUAL).</p>
+    <button type="button" class="btn btn-primary">Primary</button>
+</div>
+    <!-- {% include 'main/test.html' %} -->
     <!-- Добавляет сюда то что написано в test.html -->
 {% endblock %}
