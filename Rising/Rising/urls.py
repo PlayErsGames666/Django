@@ -17,7 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')) # добавил путь на главную страницу. Если использовать '' невписывая ничего внутрь, то будет всегда вести на главную старницу
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) # Для статических файлов
