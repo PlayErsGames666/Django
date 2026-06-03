@@ -1,0 +1,46 @@
+body {
+    background: #2c3584;
+}
+
+aside {
+    float: left;
+    background: #131c27;
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    color: #fff;
+    border-right: 5px solid #373535;
+}
+
+aside img {
+    width: 80px;
+    float: left;
+}
+
+aside .logo {
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    top: +5px;
+}
+
+aside h3 {
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+aside ul {list-style: none;}
+
+aside ul li a {
+    margin-top: 5px;
+    margin-left: auto;
+    color: #fff;
+    display: block;
+    text-decoration: none; /* Убиает декорации с текста. Сейчас там ссылка без нижнего подчёркивания */
+    transition: all .6s ease; /* Делает всё плавно, тоесть 600 милисекунд */
+}
+
+aside ul li:hover, aside ul li a:hover {
+    color: rgb(30, 30, 121);
+    transform: scale(1.1); /* Делает текст анимированным, увеличение */
+}
