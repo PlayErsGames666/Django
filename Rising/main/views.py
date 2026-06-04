@@ -2,7 +2,11 @@ from django.shortcuts import render
 # from django.http import HttpResponse # Конвертрует html code для браузера
 
 def index(request):
-    return render(request, 'main/index.html', {'title': 'Main Page'})
+    data = { # переменная с данными которые передаються в шаблон(как в JSON)
+        'title': 'Main Page',
+        'values': ['Data', '10', 'Massive']
+    }
+    return render(request, 'main/index.html', data)
 
 # Старый способ вызозова HTML
 # def main(request): # Обязательно нужно получать хотя бы один параметр, иначе не будет работать
@@ -10,4 +14,7 @@ def index(request):
 #     "<a href=/index>Index</a>") # Конвертрует html code для браузера
 
 def about(request):
-    return render(request, 'main/about.html', {'about': 'About Us'})
+    data = { # переменная с данными которые передаються в шаблон(как в JSON)
+        'about': 'About Us'
+    }
+    return render(request, 'main/about.html', data)
