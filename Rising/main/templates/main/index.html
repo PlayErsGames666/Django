@@ -20,9 +20,14 @@ nados por el Instituto Nacional de las Cualificaciones (INCUAL).</p>
     <button type="button" class="btn btn-primary">Primary</button>
 
     {% for el in values %} {# выборка цикла for из таблицы values #}
-        <p>{{ el }}</p>
+        {% if el == 'Data' %}
+            {% filter upper%} {# использование фильтра для текста, верхний регистр #}
+                <p>{{ el }}</p>
+            {% endfilter%}
+        {% endif %}
     {% endfor %} {# Закрываем for #}
-    {{ obj.age }}
+
+    {{ obj.sex| upper }} {# использование фильтра через | #}
 </div>
     <!-- {% include 'main/test.html' %} -->
     <!-- Добавляет сюда то что написано в test.html -->
