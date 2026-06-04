@@ -19,7 +19,9 @@ de títulos de la familia profesional de Informática y Comunicaciones confeccio
 nados por el Instituto Nacional de las Cualificaciones (INCUAL).</p>
     <button type="button" class="btn btn-primary">Primary</button>
 
-    {{ values }}
+    {% for el in values %} {# выборка цикла for из таблицы values #}
+    <p>{{ el }}</p>
+    {% endfor %} {# Закрываем for #}
 </div>
     <!-- {% include 'main/test.html' %} -->
     <!-- Добавляет сюда то что написано в test.html -->
