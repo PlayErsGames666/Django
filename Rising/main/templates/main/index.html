@@ -1,13 +1,13 @@
 {% extends 'main/layout.html' %} 
 <!-- Берёт шаблон из layout.html -->
 
-{% block title %} Main Page {% endblock %}
+{% block title %}{{ title }}{% endblock %}
 <!-- Блок Загаловка. Создаёт title для этого файла -->
 
 {% block body %}
 <!-- Блок body. Создаёт данные для страницы в браузере -->
 <div class="features">
-    <h1>Main Page</h1>
+    <h1>{{ title }}</h1>
     <p>El libro que presentamos es el resultado de un apasionante trabajo por explicar 
 algunas de las más importantes innovaciones que están surgiendo en Internet 
 en estos momentos, siendo la actualización de nuestro anterior libro, publicado 
