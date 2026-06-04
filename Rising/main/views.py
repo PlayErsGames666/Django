@@ -4,7 +4,12 @@ from django.shortcuts import render
 def index(request):
     data = { # переменная с данными которые передаються в шаблон(как в JSON)
         'title': 'Main Page',
-        'values': ['Data', '10', 'Massive']
+        'values': ['Data', '10', 'Massive'],
+        'obj': {
+            'sex': 'male',
+            'age': "22",
+            'hobby': 'horsing'
+        }
     }
     return render(request, 'main/index.html', data)
 
