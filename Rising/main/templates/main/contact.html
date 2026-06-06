@@ -1,0 +1,16 @@
+{% extends 'main/layout.html' %} 
+<!-- Берёт шаблон из layout.html -->
+
+{% block title %}{{ contact }}{% endblock %}
+<!-- Блок Загаловка. Создаёт title для этого файла -->
+
+{% block body %}
+<!-- Блок body. Создаёт данные для страницы в браузере -->
+<div class="features">
+    <h1>{{ contact }}</h1> {# Передача данных из views.py #}
+    <p>My contacts: +8172487841</p>
+    <button type="button" class="btn btn-primary">Primary</button>
+</div>
+    <!-- {% include 'main/test.html' %} -->
+    <!-- Добавляет сюда то что написано в test.html -->
+{% endblock %}
