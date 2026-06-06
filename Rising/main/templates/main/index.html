@@ -19,7 +19,7 @@ de títulos de la familia profesional de Informática y Comunicaciones confeccio
 nados por el Instituto Nacional de las Cualificaciones (INCUAL).</p>
     <button type="button" class="btn btn-primary">Primary</button>
 
-    {% for el in values %} {# выборка цикла for из таблицы values #}
+    <!-- {% for el in values %} {# выборка цикла for из таблицы values #}
         {% if el == 'Data' %}
             {% filter upper%} {# использование фильтра для текста, верхний регистр #}
                 <p>{{ el }}</p>
@@ -27,7 +27,7 @@ nados por el Instituto Nacional de las Cualificaciones (INCUAL).</p>
         {% endif %}
     {% endfor %} {# Закрываем for #}
 
-    {{ obj.sex| upper }} {# использование фильтра через | #}
+    {{ obj.sex| upper }} {# использование фильтра через | #} -->
 </div>
     <!-- {% include 'main/test.html' %} -->
     <!-- Добавляет сюда то что написано в test.html -->
