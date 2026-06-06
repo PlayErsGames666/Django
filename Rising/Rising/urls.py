@@ -22,5 +22,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('main.urls')) # добавил путь на главную страницу. Если использовать '' невписывая ничего внутрь, то будет всегда вести на главную старницу
+    path('', include('main.urls')), # добавил путь на главную страницу. Если использовать '' невписывая ничего внутрь, то будет всегда вести на главную старницу
+    path('news/', include('news.urls')) # добавил путь к станице новостей.
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) # Для статических файлов
