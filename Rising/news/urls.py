@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
 
-urlpatter = [
+urlpatterns = [
     path('', views.news, name = 'news')
 ]
