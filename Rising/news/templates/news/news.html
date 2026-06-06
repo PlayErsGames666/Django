@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %} {# можно брать шаблоны из других приложений #}
+<!-- Берёт шаблон из layout.html -->
+
+{% block title %}News{% endblock %}
+<!-- Блок Загаловка. Создаёт title для этого файла -->
+
+{% block body %}
+<!-- Блок body. Создаёт данные для страницы в браузере -->
+<div class="features">
+    <h1>{{ title }}</h1> {# Передача данных из views.py #}
+    <p>Todays news is good for you to know. You know?</p>
+    <button type="button" class="btn btn-primary">Primary</button>
+{% endblock %}
