@@ -23,3 +23,9 @@ def about(request):
         'about': 'About Us'
     }
     return render(request, 'main/about.html', data)
+
+def contact(request):
+    data = {
+        'contact': 'My contacts'
+    }
+    return render(request, 'main/contact.html', data)
