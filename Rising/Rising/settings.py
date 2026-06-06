@@ -110,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en-us' # Если поставить ru то весь сайт будет на русском языке, тоесть default eng админка будет на русском
 
 TIME_ZONE = 'UTC'
 
