@@ -8,3 +8,7 @@ class Articles(models.Model): # Создаём класс как таблицу 
 
     def __str__(self): # На след уроке объяснит
         return self.title
+
+    class Meta: # Создали класс для смены названия в админ панели
+        verbose_name = "New" # Назваение таблицы в ед числе
+        verbose_name_plural = "News" # Назваение таблицы в мнж числе
