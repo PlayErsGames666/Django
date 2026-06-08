@@ -6,9 +6,15 @@
 
 {% block body %}
 <!-- Блок body. Создаёт данные для страницы в браузере -->
-<div class="features">
-    <h1>{{ title }}</h1> {# Передача данных из views.py #}
-    <p>Todays news is good for you to know. You know?</p>
-    <button type="button" class="btn btn-primary">Primary</button>
-    {{ news }} {# Передача данных из views, из db #}
+    <div class="features">
+        <h1>{{ title }}</h1> {# Передача данных из views.py #}
+
+        {% for el in news %}
+            <div class="alert alert-warning">
+                <h3>{{ el.title }}</h3>
+                <p>{{ el.announs }}</p>
+            </div>
+        {% endfor %}
+
+    <!-- {{ news }} {# Передача данных из views, из db #} -->
 {% endblock %}
