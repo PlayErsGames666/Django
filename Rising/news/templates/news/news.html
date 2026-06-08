@@ -8,13 +8,16 @@
 <!-- Блок body. Создаёт данные для страницы в браузере -->
     <div class="features">
         <h1>{{ title }}</h1> {# Передача данных из views.py #}
-
-        {% for el in news %}
-            <div class="alert alert-warning">
-                <h3>{{ el.title }}</h3>
-                <p>{{ el.announs }}</p>
-            </div>
-        {% endfor %}
+        {% if news %}
+            {% for el in news %}
+                <div class="alert alert-warning">
+                    <h3>{{ el.title }}</h3>
+                    <p>{{ el.announs }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Now we don't have any news</p>
+        {% endif %}
 
     <!-- {{ news }} {# Передача данных из views, из db #} -->
 {% endblock %}
