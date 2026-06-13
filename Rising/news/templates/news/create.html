@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %} {# можно брать шаблоны из других приложений #}
+<!-- Берёт шаблон из layout.html -->
+
+{% block title %}Create Posts{% endblock %}
+<!-- Блок Загаловка. Создаёт title для этого файла -->
+
+{% block body %}
+<!-- Блок body. Создаёт данные для страницы в браузере -->
+    <div class="features">
+        <h1>{{ title_name }}</h1> {# Передача данных из views.py #}
+        <form method="post">
+            <input type="text" placeholder="Title" class="form-control"><br>
+            <input type="text" placeholder="Announsments" class="form-control"><br>
+            <textarea placeholder="Text of Announsments" class="form-control"></textarea><br>
+            <input type="date" class="form-control"><br>
+            <input type="time" class="form-control"><br>
+            <button class="btn btn-success" type="submit">Add Post</button>
+        </form>
+    </div>
+    <!-- {{ news }} {# Передача данных из views, из db #} -->
+{% endblock %}  
