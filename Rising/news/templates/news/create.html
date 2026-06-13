@@ -9,11 +9,11 @@
     <div class="features">
         <h1>{{ title_name }}</h1> {# Передача данных из views.py #}
         <form method="post">
-            <input type="text" placeholder="Title" class="form-control"><br>
-            <input type="text" placeholder="Announsments" class="form-control"><br>
-            <textarea placeholder="Text of Announsments" class="form-control"></textarea><br>
-            <input type="date" class="form-control"><br>
-            <input type="time" class="form-control"><br>
+            {% csrf_token %}
+            {{ form.title }}<br>
+            {{ form.announs }}<br>
+            {{ form.text }}<br>
+            {{ form.date }}<br>
             <button class="btn btn-success" type="submit">Add Post</button>
         </form>
     </div>
