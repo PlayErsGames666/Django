@@ -7,7 +7,7 @@
 {% block body %}
 <!-- Блок body. Создаёт данные для страницы в браузере -->
     <div class="features">
-        <h1>{{ title }}</h1> {# Передача данных из views.py #}
+        <h1>{{ title_name }}</h1> {# Передача данных из views.py #}
         {% if news %}
             {% for el in news %}
                 <div class="alert alert-warning">
