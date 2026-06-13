@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Articles
+from .forms import ArticlesForm
 
 def news(request):
     news_list = Articles.objects.order_by('date') # Создали переменную с данными из таблицы Articles. all() означает все данные
@@ -12,7 +13,9 @@ def news(request):
     return render(request, 'news/news.html', data) # Добавили ключ для работы с articles
 
 def create(request):
+    form = ArticlesForm()
     data = {
-        'title_name': 'Create Posts'
+        'title_name': 'Create Posts',
+        'form': form
     }
     return render(request, 'news/create.html', data)
