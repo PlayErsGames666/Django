@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Articles
 from .forms import ArticlesForm
+from django.views.generic import DetailView
 
 def news(request):
     news_list = Articles.objects.all() # Создали переменную с данными из таблицы Articles. all() означает все данные
@@ -11,6 +12,12 @@ def news(request):
         'news': news_list
     }
     return render(request, 'news/news.html', data) # Добавили ключ для работы с articles
+
+class NewDetailView(DetailView):
+    model = Articles
+    template_name = 'news/details_view.html'
+    context_object_name = 'article'
+
 
 def create(request):
     error = ""
