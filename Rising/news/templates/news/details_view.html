@@ -1,7 +1,7 @@
 {% extends 'main/layout.html' %} {# можно брать шаблоны из других приложений #}
 <!-- Берёт шаблон из layout.html -->
 
-{% block title %}News{% endblock %}
+{% block title %}{{ article.title }}{% endblock %}
 <!-- Блок Загаловка. Создаёт title для этого файла -->
 
 {% block body %}
