@@ -13,22 +13,22 @@ def news(request):
     }
     return render(request, 'news/news.html', data) # Добавили ключ для работы с articles
 
-class NewDetailView(DetailView):
-    model = Articles
-    template_name = 'news/details_view.html'
-    context_object_name = 'article'
+class NewDetailView(DetailView): # класс в котором можно будет просмотреть пост детально
+    model = Articles # Модель к которой обращается 
+    template_name = 'news/details_view.html' # имя шаблона на который надо перейти
+    context_object_name = 'article' # ключ который можно использовать для обращения к данным из DB
 
 
-class NewsUpdateView(UpdateView):
-    model = Articles
-    template_name = 'news/create.html'
+class NewsUpdateView(UpdateView): # класс в котором можно обновить данные поста
+    model = Articles # Модель к которой обращается 
+    template_name = 'news/create.html' # имя шаблона на который надо перейти
 
-    form_class = ArticlesForm
+    form_class = ArticlesForm # Класс формы которую сделали в forms.py 
 
-class NewsDeleteView(DeleteView):
-    model = Articles
-    success_url = '/news/'
-    template_name = 'news/news-delete.html'
+class NewsDeleteView(DeleteView): # класс в котором можно удалить данные поста
+    model = Articles # Модель к которой обращается 
+    success_url = '/news/' # переход на страницу после удаления
+    template_name = 'news/news-delete.html' # имя шаблона на который надо перейти
 
 def create(request):
     error = ""
